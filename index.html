@@ -13,8 +13,6 @@ margin-top:120px;
 overflow:hidden;
 }
 
-/* Hearts animation */
-
 .heart{
 position:fixed;
 bottom:-20px;
@@ -27,8 +25,6 @@ opacity:0.7;
 0%{transform:translateY(0) scale(1);opacity:0.8;}
 100%{transform:translateY(-100vh) scale(1.5);opacity:0;}
 }
-
-/* Petals */
 
 .petal{
 position:fixed;
@@ -108,7 +104,6 @@ Please forgive me?
 
 <script>
 
-/* Move No button */
 function moveButton(){
 let btn = document.getElementById("noBtn");
 
@@ -119,7 +114,6 @@ btn.style.left = x + "px";
 btn.style.top = y + "px";
 }
 
-/* Yes clicked */
 function yesClicked(){
 document.body.innerHTML = `
 <h1>YAYYYY 🥰💞</h1>
@@ -127,12 +121,11 @@ document.body.innerHTML = `
 
 <h2>Thank you for forgiving me 🥺🌹</h2>
 
-<img src="https://raw.githubusercontent.com/ShayanCanCode/aikaurbaarmaafkrdo/main/cat-rose.gif">
+<img src="https://ShayanCanCode.github.io/aikaurbaarmaafkrdo/cat-rose.gif">
 
 `;
 }
 
-/* Floating hearts */
 setInterval(()=>{
 let heart=document.createElement("div");
 heart.className="heart";
@@ -140,12 +133,9 @@ heart.innerHTML="💗";
 heart.style.left=Math.random()*100+"vw";
 heart.style.fontSize=(15+Math.random()*20)+"px";
 document.body.appendChild(heart);
-
 setTimeout(()=>{heart.remove()},6000);
-
 },500);
 
-/* Petals */
 setInterval(()=>{
 let petal=document.createElement("div");
 petal.className="petal";
@@ -153,9 +143,7 @@ petal.innerHTML="🌸";
 petal.style.left=Math.random()*100+"vw";
 petal.style.fontSize=(15+Math.random()*15)+"px";
 document.body.appendChild(petal);
-
 setTimeout(()=>{petal.remove()},8000);
-
 },900);
 
 </script>
